@@ -59,9 +59,9 @@ Le nom de « Notation 71 » vient de la valeur hexadécimal de 71 qui se note 
 
 ### Exemples
 
-71,  0x47 : BOBI : <img src="/img/4.png" width="32" height="32"><img src="/img/7.png" width="32" height="32"> 
+71 = 0x47 = BOBI = <img src="/img/4.png" width="32" height="32"><img src="/img/7.png" width="32" height="32"> 
 
-16041922 : 0xF4C7C2 : DIBODOBIDOHE : <img src="/img/15.png" width="32" height="32"><img src="/img/4.png" width="32" height="32"><img src="/img/12.png" width="32" height="32"><img src="/img/7.png" width="32" height="32"><img src="/img/12.png" width="32" height="32"><img src="/img/2.png" width="32" height="32">
+16041922 = 0xF4C7C2 = DIBODOBIDOHE = <img src="/img/15.png" width="32" height="32"><img src="/img/4.png" width="32" height="32"><img src="/img/12.png" width="32" height="32"><img src="/img/7.png" width="32" height="32"><img src="/img/12.png" width="32" height="32"><img src="/img/2.png" width="32" height="32">
 
 
 
