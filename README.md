@@ -36,9 +36,10 @@ sera marqué par un disque plein : <img src="/img/0.png" width="32" height="32"
 
 
 Outre l’aspect pédagogique, une telle notation permet de convertir très rapidement d’une base à l’autre, en assignant la valeur hexadécimale de chacun des 4 segments composant la figure : 
+
 <img src="/img/8421.png" width="96" height="96">
 
-Par example, la figure <img src="/img/7.png" width="32" height="32"> vaudra  4 + 2 + 1 = 7
+Par exemple, la figure <img src="/img/7.png" width="32" height="32"> vaudra  4 + 2 + 1 = 7
 
 De même, la figure <img src="/img/13.png" width="32" height="32"> vaudra  8 + 4 + 1 = 13
 
