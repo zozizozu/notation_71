@@ -36,7 +36,7 @@ notationAscii = [
 ]
 
 
-# Math util 
+# Retourne le plus grand diviseur pour la base et l'exposant
 def getMaxDiv ( base, decNumber ): 
 	maxDiv= 1
 	exp = 0
@@ -44,7 +44,8 @@ def getMaxDiv ( base, decNumber ):
 		maxDiv = maxDiv * base
 		exp += 1	
 	return [maxDiv, exp]
-
+	
+# Retourne un tableau des valeurs
 def decToBase(base, decNumber):
 	hexVals = []
 	divExp = getMaxDiv(base, decNumber)
@@ -56,7 +57,7 @@ def decToBase(base, decNumber):
 		divRes = divRes - ( hVal*maxDiv );
 		maxDiv = maxDiv/base;
 		hexVals.append( hVal )
-		
+			
 	for ie in range( len(hexVals)-1, exp):
 		hexVals.append( 0 )
 
@@ -76,6 +77,9 @@ def hexToBibi ( hexNumber ):
 	for h in hexNumber:
 		phonetic += bibiPhonetic[h]
 	return phonetic
+
+def decToBibi(decNum):
+	return hexToBibi(decToHex( decNum ))
 	
 # Un symbole pouvant contenir jusqu'à 4 caractères, on sépare par un point.
 def hexToAscii ( hexNumber ):
@@ -88,19 +92,15 @@ def hexToAscii ( hexNumber ):
 		n += 1
 	return s
 	
-def decToBibi(decNum):
-	return hexToBibi(decToHex( decNum ))
 	
 def decToStr(dec): 
 	bina = decToBin(dec) 
-	strBin = ''
-	for i in range(4-len(bina)):
-		strBin += '0'
+	strBin = '000'
 	for i in bina:
 		strBin += str(i)
-	return strBin
+	return strBin[-4:]
 	
-def decToStrSquare(dec):
+def decToClockStr(dec):
 	s = decToStr(dec)
 	sqS = ''
 	sqS += s[3]+'   '+s[0]+'\n'
