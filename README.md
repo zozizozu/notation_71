@@ -6,7 +6,7 @@
 
 Injustement considéré comme une simple curiosité mathématique, le BibiBinaire apparaît comme une  réflexion profonde sur la lisibilité et la conversion d’une base à l’autre, permettant d’exprimer à la fois la valeur binaire et la valeur hexadécimale d’un chiffre.
 
-La représentation du binaire et la notation graphique choisie par Boby LAPOINTE était cependant pour moi trop complexe, en cause un manque de connaissance des languages informatique (), aussi, j’ai voulu imaginer une notation utilisant un procédé similaire en incluant un sens de lecture des bits plus accessible.
+La représentation du binaire et la notation graphique choisie par Boby LAPOINTE était cependant pour moi trop complexe, en cause un manque de connaissance des languages informatique, aussi, j’ai voulu imaginer une notation utilisant un procédé similaire en incluant un sens de lecture des bits plus accessible.
 
 ### Description
 La notation des chiffres de 0 à 15 sera donc basé sur une représentation de leur valeur binaire sur 4 bits.
@@ -20,10 +20,10 @@ Chacun des 16 symboles sera construit avec 0, 1, 2, 3 ou 4 segments représentan
  
 Si le bit est positif, il sera noté par un segment troncant le quart de cercle (le 1/4 d’heure) correspondant, si le bit est négatif, on ne note rien.
 
-Le chiffre 1 se représente donc : <img src="/img/1_nodir.png" width="32" height="32">
+Le chiffre 1 se représente donc avec un segment troncant le quart supérieur gauche: <img src="/img/1_nodir.png" width="32" height="32">
 
 
-Si le binaire ne comporte qu’une seul bit positif, sa représentation ne comporte qu’une seul segment. 
+Si le binaire ne comporte qu’un seul bit positif, sa représentation ne comporte qu’une seul segment. 
 
 Il sera donc possible, surtout en écriture manuscrite, de confondre 2 chiffres représentés par un segment de même orientation, dont seule change la disposition, comme 1 et 4 par example.
 
@@ -32,7 +32,7 @@ direction de celui-ci, soit respectivement pour le 1 et le 4 : <img src="/img/1.
 
 
 A l’inverse, si le binaire ne contient aucun bit positif, c’est à dire le zéro, l’absence de segment 
-sera marquée par un disque plein : <img src="/img/0.png" width="32" height="32">
+sera marquée par un disque : <img src="/img/0.png" width="32" height="32">
 
 
 ### Intérêts
@@ -40,16 +40,15 @@ Outre l’aspect pédagogique, cette notation permet de convertir très rapideme
 
 <img src="/img/8421.png" width="96" height="96">
 
-Par exemple, la figure <img src="/img/7.png" width="32" height="32"> représente les valeurs 4 + 2 + 1 = 7
+Par exemple, la figure <img src="/img/6.png" width="32" height="32"> représente les bits 0110, soit 4 + 2 
 
-De même, la figure <img src="/img/13.png" width="32" height="32"> représente les valeurs 8 + 4 + 1 = 13
+De même, la figure <img src="/img/7.png" width="32" height="32"> représente les bits 0111, soit 4 + 2 + 1 
 
 ### Notes
 Il ne s’agit que d'une proposition de nomenclature, nous garderons dans cet example la prononciation parfaitement cohérente du BibiBinaire.
 
 Le nom de « Notation 71 » vient de la valeur hexadécimal de 71 qui se note 47, et se prononce « BOBI ».
  
-
 
 ### Proposition de représentation et de notation du BibiBinaire 
 ![Nomenclature de la notation 71.](/img/notation.png)
