@@ -19,7 +19,7 @@ Ainsi, pour le nombre 1, le binaire 0001 sera représenté <img src="/img/0001-h
 Chacun des 16 symbôles sera représenté par 0 à 4 segments, eux même représentant la valeur de chaque bit.
  
 Si le bit est positif, il sera noté par un segment troncant le quart d’heure correspondant, si le bit est
- négatif, on ne note rien, ainsi le 1 se représente : <img src="/img/1_nodir.png" width="64" height="64">
+ négatif, on ne note rien, ainsi le 1 se représente : <img src="/img/1_nodir.png" width="32" height="32">
 
 
 Si le binaire ne comporte qu’une seul bit positif, sa représentation ne comporte qu’une seul segment. 
