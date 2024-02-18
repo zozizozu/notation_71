@@ -90,7 +90,7 @@ def decToStrSquare(dec):
 	sqS = ''
 	sqS += s[3]+'   '+s[0]+'\n'
 	sqS += asciiArrows[1]+'   '+asciiArrows[4]+'\n'
-	sqS += s[1]+ asciiArrows[2] +s[2]
+	sqS += s[2]+ asciiArrows[2] +s[1]
 	return sqS
 	
 
