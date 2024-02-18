@@ -27,19 +27,19 @@ Si le binaire ne comporte qu’une seul bit positif, sa représentation ne compo
 Il sera donc possible, surtout en écriture manuscrite, de confondre 2 chiffres représentés par un segment de même orientation, dont seule change la disposition, comme 1 et 4 par example.
 
 Afin d’ éviter cette confusion, si le symbôle ne comporte qu’un seul segment, on marquera la 
-direction de celui-ci, soit, respectivement pour le 1  et le 4 : <img src="/img/1.png" width="64" height="64"> <img src="/img/4.png" width="64" height="64">
+direction de celui-ci, soit, respectivement pour le 1  et le 4 : <img src="/img/1.png" width="32" height="32"> <img src="/img/4.png" width="32" height="32">
 
 
 A l’inverse, si le binaire ne contient aucun bit positif, c’est à dire le zéro, l’absence de segment 
-sera marqué par un disque plein : <img src="/img/0.png" width="64" height="64">
+sera marqué par un disque plein : <img src="/img/0.png" width="32" height="32">
 
 
 
-Outre l’aspect pédagogique, une telle notation permet de convertir très rapidement d’une base à l’autre, en assignant la valeur hexadécimale de chacun des 4 segments composant la figure : <img src="/img/8421.png" width="64" height="64">
+Outre l’aspect pédagogique, une telle notation permet de convertir très rapidement d’une base à l’autre, en assignant la valeur hexadécimale de chacun des 4 segments composant la figure : <img src="/img/8421.png" width="32" height="32">
 
-Par example, la figure <img src="/img/7.png" width="64" height="64"> vaudra  4 + 2 + 1 = 7
+Par example, la figure <img src="/img/7.png" width="32" height="32"> vaudra  4 + 2 + 1 = 7
 
-De même, la figure <img src="/img/13.png" width="64" height="64"> vaudra  8 + 4 + 1 = 13
+De même, la figure <img src="/img/13.png" width="32" height="32"> vaudra  8 + 4 + 1 = 13
 
 
 Encore une fois, il ne s’agit que de nomenclature, la prononciation du BibiBinaire étant parfaitement cohérente.
