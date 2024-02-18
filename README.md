@@ -20,7 +20,7 @@ Si le bit est positif, il sera noté par un segment troncant le quart d’heure 
 
 Si le binaire ne comporte qu’une seul bit positif, sa représentation ne comporte qu’une seul segment. Il sera donc possible, surtout en écriture manuscrite, de confondre 2 chiffres représentés par un segment de même orientation, dont seule change la disposition, comme 1 et 4 par example.
 Afin d’ éviter cette confusion, si le symbôle ne comporte qu’un seul segment, on marquera la 
-direction de celui-ci, soit pour le 1  et le 4 : <img src="/img/4.png" width="64" height="64">
+direction de celui-ci, soit, respectivement pour le 1  et le 4 : <img src="/img/1.png" width="64" height="64"> <img src="/img/4.png" width="64" height="64">
 
 
 A l’inverse, si le binaire ne contient aucun bit positif, c’est à dire le zéro, l’absence de segment 
