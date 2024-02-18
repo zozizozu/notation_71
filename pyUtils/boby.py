@@ -5,6 +5,37 @@ import os
 
 ROOTPATH = os.path.join( os.path.dirname(os.path.abspath(__file__)), '..')  
 
+	
+# Construction des phonemes BIBI
+consonnes = ['h', 'b', 'c', 'd']
+voyelles = ['o', 'a', 'e', 'i']
+bibiPhonetic = []
+for c in consonnes:
+	for v in voyelles: 
+		bibiPhonetic.append(c.upper()+v.upper())
+
+# Equivalent ascii de la notation 71, le vecteur gauche->droite correspond au 1er bit
+asciiArrows = { 0: u'\u25CB', 1: u'\u2191', 2: u'\u2190', 4: u'\u2193', 8: u'\u2192'  }
+notationAscii = [
+	asciiArrows[0], 
+	asciiArrows[1], 
+	asciiArrows[2], 
+	asciiArrows[2] + asciiArrows[1], 
+	asciiArrows[4], 
+	asciiArrows[4] + asciiArrows[1], 
+	asciiArrows[4] + asciiArrows[2], 
+	asciiArrows[4] + asciiArrows[2] + asciiArrows[1], 
+	asciiArrows[8], 
+	asciiArrows[8] + asciiArrows[1], 
+	asciiArrows[8] + asciiArrows[2], 
+	asciiArrows[8] + asciiArrows[2] + asciiArrows[1],
+	asciiArrows[8] + asciiArrows[4], 
+	asciiArrows[8] + asciiArrows[4] +asciiArrows[1], 
+	asciiArrows[8] + asciiArrows[4] + asciiArrows[2], 
+	asciiArrows[8] + asciiArrows[4] + asciiArrows[2] + asciiArrows[1] 
+]
+
+
 # Math util 
 def getMaxDiv ( base, decNumber ): 
 	maxDiv= 1
@@ -37,32 +68,16 @@ def decToHex(dec):
 def decToBin(dec): 
 	return decToBase(2, dec)
 	
-	
-# Equivalent ascii de la notation 71, le vecteur gauche->droite correspond au 1er bit
-asciiArrows = { 0: u'\u25CB', 1: u'\u2191', 2: u'\u2190', 4: u'\u2193', 8: u'\u2192'  }
-
-notationAscii = [
-	asciiArrows[0], asciiArrows[1], asciiArrows[2], asciiArrows[2] + asciiArrows[1], 
-	asciiArrows[4], asciiArrows[4] + asciiArrows[1], asciiArrows[4] + asciiArrows[2], asciiArrows[4] + asciiArrows[2] + asciiArrows[1], 
-	asciiArrows[8], asciiArrows[8] + asciiArrows[1], asciiArrows[8] + asciiArrows[2], asciiArrows[8] + asciiArrows[2] + asciiArrows[1],
-	asciiArrows[8] + asciiArrows[4], asciiArrows[8] + asciiArrows[4] +asciiArrows[1], asciiArrows[8] + asciiArrows[4] + asciiArrows[2], asciiArrows[8] + asciiArrows[4] + asciiArrows[2] + asciiArrows[1] 
-]
-
-# Construction des phonemes BIBI
-_consonnes = ['h', 'b', 'c', 'd']
-_voyelles = ['o', 'a', 'e', 'i']
-_bibiPhonetic = []
-for c in _consonnes:
-	for v in _voyelles: 
-		_bibiPhonetic.append(c.upper()+v.upper())
 
 # Conversions
+
 def hexToBibi ( hexNumber ):
 	phonetic = ''
 	for h in hexNumber:
-		phonetic += _bibiPhonetic[h]
+		phonetic += bibiPhonetic[h]
 	return phonetic
-
+	
+# Un symbole pouvant contenir jusqu'à 4 caractères, on sépare par un point.
 def hexToAscii ( hexNumber ):
 	s = ''
 	n=0
