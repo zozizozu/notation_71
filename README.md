@@ -6,7 +6,7 @@
 
 Injustement considéré comme une simple curiosité mathématique, le BibiBinaire apparaît comme une  réflexion profonde sur la lisibilité et la conversion d’une base à l’autre, permettant d’exprimer à la fois la valeur binaire et la valeur hexadécimale d’un chiffre.
 
-La représentation du binaire et la notation graphique choisie par Boby LAPOINTE était cependant pour moi trop complexe, en cause un manque de connaissance des languages informatique (), aussi, j’ai voulu imaginer une notation en utilisant un procédé similaire, en incluant un sens de lecture des bits du binaire plus accessible à tous.
+La représentation du binaire et la notation graphique choisie par Boby LAPOINTE était cependant pour moi trop complexe, en cause un manque de connaissance des languages informatique (), aussi, j’ai voulu imaginer une notation utilisant un procédé similaire en incluant un sens de lecture des bits plus accessible.
 
 ### Description
 La notation des chiffres de 0 à 15 sera donc basé sur une représentation de leur valeur binaire sur 4 bits.
@@ -40,13 +40,12 @@ Outre l’aspect pédagogique, cette notation permet de convertir très rapideme
 
 <img src="/img/8421.png" width="96" height="96">
 
-Par exemple, la figure <img src="/img/7.png" width="32" height="32"> vaudra  4 + 2 + 1 = 7
+Par exemple, la figure <img src="/img/7.png" width="32" height="32"> représente les valeurs 4 + 2 + 1 = 7
 
-De même, la figure <img src="/img/13.png" width="32" height="32"> vaudra  8 + 4 + 1 = 13
+De même, la figure <img src="/img/13.png" width="32" height="32"> représente les valeurs 8 + 4 + 1 = 13
 
-
-### Conclusion
-Encore une fois, il ne s’agit que de nomenclature, la prononciation du BibiBinaire étant parfaitement cohérente.
+### Notes
+Il ne s’agit que d'une proposition de nomenclature, nous garderons dans cet example la prononciation parfaitement cohérente du BibiBinaire.
 
 Le nom de « Notation 71 » vient de la valeur hexadécimal de 71 qui se note 47, et se prononce « BOBI ».
  
