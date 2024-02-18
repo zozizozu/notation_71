@@ -44,14 +44,16 @@ Par exemple, la figure <img src="/img/7.png" width="32" height="32"> vaudra  4 +
 De même, la figure <img src="/img/13.png" width="32" height="32"> vaudra  8 + 4 + 1 = 13
 
 
+
 Encore une fois, il ne s’agit que de nomenclature, la prononciation du BibiBinaire étant parfaitement cohérente.
+
 
 Le nom de « Notation 71 » vient de la valeur hexadécimal de 71 qui se note 47, et se prononce « BOBI ».
  
 
 
 
-Proposition de représentation et de notation du BibiBinaire 
+### Proposition de représentation et de notation du BibiBinaire 
 ![Nomenclature de la notation 71.](/img/notation.png)
 	
 
