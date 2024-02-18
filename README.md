@@ -10,7 +10,7 @@ La notation graphique choisie par Boby LAPOINTE était cependant pour moi trop c
 La notation des chiffres de 0 à 15 sera donc basé sur une représentation de leur valeur binaire sur 4 bits.
 Afin d’utiliser un sens de lecture commun à tous, je propose de se représenter les 4 chiffres binaires comme les 4 quart d’heure d’une horloge : le 1er  bit dans le 1er quart d’heure, le 2eme bit dans le 2eme quart d’heure,  le 3eme bit dans le 3eme quart d’heure, et le 4eme bit dans le 4eme quart d’heure.
 
-Ainsi, pour le nombre 1, le binaire 0001 sera représenté ![Symbôle 1 - Disposition horaire](/img/0001-horaire.png | width=32 )
+Ainsi, pour le nombre 1, le binaire 0001 sera représenté <img src="/img/0001-horaire.png" width="32" height="32">
 
 
 Chacun des 16 symbôles sera représenté par 0 à 4 segments, eux même représentant la valeur de chaque bit. 
