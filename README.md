@@ -45,7 +45,7 @@ Par exemple, la figure <img src="/img/6.png" width="32" height="32"> représente
 De même, la figure <img src="/img/7.png" width="32" height="32"> représente les bits 0111, soit 4 + 2 + 1 
 
 ### Notes
-Il ne s’agit que d'une proposition de nomenclature, nous garderons dans cet example la prononciation parfaitement cohérente du BibiBinaire.
+Il ne s’agit que d'une proposition de nomenclature, nous garderons dans cet example la prononciation du BibiBinaire.
 
 Le nom de « Notation 71 » vient de la valeur hexadécimal de 71 qui se note 47, et se prononce « BOBI ».
  

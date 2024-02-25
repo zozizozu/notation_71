@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
+import os, sys
 
 ROOTPATH = os.path.join( os.path.dirname(os.path.abspath(__file__)), '..')  
 
@@ -112,5 +112,8 @@ def decToClockStr(dec):
 
 
 
-
+if __name__ == '__main__':
+	if len(sys.argv) > 1 : dec = int(sys.argv[1])
+	else : dec = 71
+	print(">>>", dec, " : ", decToHex(dec), "=>", decToBibi(dec))
 
