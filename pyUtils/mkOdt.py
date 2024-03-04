@@ -63,7 +63,7 @@ def mkTab(tab, fileName='Notation_71'):
 		for c in tab[iRow]:
 			cell = TableCell( stylename='justified' )
 			content = str(c)
-			if '.png' == content[-4:]:
+			if '.png' == content[-4:] :
 				photoframe = Frame(width="20pt", height="20pt", x="10pt", y="10pt")
 				href = textdoc.addPicture(content)
 				photoframe.addElement(Image(href=href))

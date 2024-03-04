@@ -11,6 +11,8 @@ def test(dec):
 	print('decToHex : ', hexval)
 	print('hexToBibi : ', boby.hexToBibi( hexval ))
 	print('hexToAscii : ', boby.hexToAscii( hexval))
+	print('decToClockStr : ')
+	print(boby.decToClockStr(dec))
 	
 
 tests = [ 
@@ -23,7 +25,7 @@ tests = [
 	19220416, 416, 1604, 
 	16,256,4096,65536, 
 	15,255,4095,65535, 
-	20240218, 1498, 
+	20240218, 1498
 ]
 	
 # test conv

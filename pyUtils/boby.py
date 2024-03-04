@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os, sys
+from typing import List
 
 ROOTPATH = os.path.join( os.path.dirname(os.path.abspath(__file__)), '..')  
 
@@ -30,14 +31,17 @@ notationAscii = [
 	asciiArrows[8] + asciiArrows[2], 
 	asciiArrows[8] + asciiArrows[2] + asciiArrows[1],
 	asciiArrows[8] + asciiArrows[4], 
-	asciiArrows[8] + asciiArrows[4] +asciiArrows[1], 
+	asciiArrows[8] + asciiArrows[4] + asciiArrows[1], 
 	asciiArrows[8] + asciiArrows[4] + asciiArrows[2], 
 	asciiArrows[8] + asciiArrows[4] + asciiArrows[2] + asciiArrows[1] 
 ]
 
 
-# Retourne le plus grand diviseur pour la base et l'exposant
-def getMaxDiv ( base, decNumber ): 
+# 
+def getMaxDiv ( base: int, decNumber: int ) -> List[int] : 
+	'''
+	Retourne le plus grand diviseur de la base pour decNumber, et l'exposant.
+	'''
 	maxDiv= 1
 	exp = 0
 	while( maxDiv*base <= decNumber ):
@@ -46,7 +50,7 @@ def getMaxDiv ( base, decNumber ):
 	return [maxDiv, exp]
 	
 # Retourne un tableau des valeurs
-def decToBase(base, decNumber):
+def decToBase( base: int, decNumber: int ) -> List[int]:
 	hexVals = []
 	divExp = getMaxDiv(base, decNumber)
 	maxDiv = divExp[0]
@@ -63,26 +67,25 @@ def decToBase(base, decNumber):
 
 	return hexVals; 
 
-def decToHex(dec): 
+def decToHex( dec: int ) -> List[int]: 
 	return decToBase(16, dec)
 	
-def decToBin(dec): 
+def decToBin( dec: int ) -> List[int]: 
 	return decToBase(2, dec)
-	
+
 
 # Conversions
-
-def hexToBibi ( hexNumber ):
+def hexToBibi ( hexNumber: List[int] ) -> str:
 	phonetic = ''
 	for h in hexNumber:
 		phonetic += bibiPhonetic[h]
 	return phonetic
 
-def decToBibi(decNum):
+def decToBibi(decNum: int):
 	return hexToBibi(decToHex( decNum ))
 	
 # Un symbole pouvant contenir jusqu'à 4 caractères, on sépare par un point.
-def hexToAscii ( hexNumber ):
+def hexToAscii ( hexNumber: List[int] ) -> str:
 	s = ''
 	n=0
 	for h in hexNumber:
@@ -91,29 +94,71 @@ def hexToAscii ( hexNumber ):
 			s += '.'
 		n += 1
 	return s
-	
-	
-def decToStr(dec): 
+
+def decToStr(dec: int) -> str : 
 	bina = decToBin(dec) 
 	strBin = '000'
 	for i in bina:
 		strBin += str(i)
 	return strBin[-4:]
-	
-def decToClockStr(dec):
-	s = decToStr(dec)
-	sqS = ''
-	sqS += s[3]+'   '+s[0]+'\n'
-	sqS += asciiArrows[1]+'   '+asciiArrows[4]+'\n'
-	sqS += s[2]+ asciiArrows[2] +s[1]
-	return sqS
-	
 
+def decToClockStr(dec: int, forOds: bool = False) -> str :
+	firstL = ''
+	secondL = ''
+	thirdL = ''
+	hexVal = decToHex(dec)
+	i=0
+	middleSpace = '   '
+	lastSpace = ' '
+	if forOds: 
+		lastSpace = ''
+		middleSpace += ' '
+	for h in hexVal:
+		s = decToStr(h)
+		firstL += s[3] + middleSpace + s[0]
+		secondL += asciiArrows[1] + middleSpace + asciiArrows[4]
+		thirdL += s[2]+ lastSpace + asciiArrows[2] + lastSpace +s[1]
+		if i < len(hexVal)-1: 
+			firstL += ' | '
+			secondL += ' | '
+			thirdL += ' | '
+		i+=1
+	return firstL+'\n'+secondL+'\n'+thirdL
 
+def decToCounterClockStr(dec: int, forOds: bool = False) -> str :
+	firstL = ''
+	secondL = ''
+	thirdL = ''
+	hexVal = decToHex(dec)
+	i=0
+	middleSpace = '   '
+	lastSpace = ' '
+	if forOds: 
+		lastSpace = ''
+		middleSpace += ' '
+	for h in hexVal:
+		s = decToStr(h)
+		firstL += s[0] + middleSpace + s[3]
+		secondL += asciiArrows[1] + middleSpace + asciiArrows[4]
+		thirdL += s[1]+ lastSpace + asciiArrows[2] + lastSpace +s[2]
+		if i < len(hexVal)-1: 
+			firstL += ' | '
+			secondL += ' | '
+			thirdL += ' | '
+		i+=1
+	return firstL+'\n'+secondL+'\n'+thirdL
+	
 
 
 if __name__ == '__main__':
 	if len(sys.argv) > 1 : dec = int(sys.argv[1])
 	else : dec = 71
-	print(">>>", dec, " : ", decToHex(dec), "=>", decToBibi(dec))
+	print("Dec :", dec)
+	print("Bin :", decToBin(dec))
+	print("Clock")
+	print(decToClockStr(dec))
+	print("Hex :", decToHex(dec))
+	print("Bibi:", decToBibi(dec))
+	#print(decToCounterClockStr(dec))
+	
 

@@ -7,7 +7,7 @@ from pyUtils import boby, mkOdt
 def mkRow(i):
 	bina = boby.decToBin(i) 
 	strBin = boby.decToStr(i)
-	strBinSq = boby.decToClockStr(i)
+	strBinSq = boby.decToClockStr(i, True)
 	hexa = boby.decToHex(i) 
 	bibi = boby.hexToBibi( hexa )
 	return [ i, strBin, strBinSq, boby.ROOTPATH+'/img/'+str(i)+'.png', bibi ]
