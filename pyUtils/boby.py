@@ -40,7 +40,7 @@ notationAscii = [
 # 
 def getMaxDiv ( base: int, decNumber: int ) -> List[int] : 
 	'''
-	Retourne le plus grand diviseur de la base pour decNumber, et l'exposant.
+	Retourne le plus grand diviseur de decNumber pour la base , et l'exposant.
 	'''
 	maxDiv= 1
 	exp = 0
@@ -53,19 +53,28 @@ def getMaxDiv ( base: int, decNumber: int ) -> List[int] :
 def decToBase( base: int, decNumber: int ) -> List[int]:
 	hexVals = []
 	divExp = getMaxDiv(base, decNumber)
-	maxDiv = divExp[0]
+	maxDiv = originalMaxDiv = divExp[0]
 	exp = divExp[1]
+	if 2 == base : lenModulo = 4
+	elif 16 == base : lenModulo = 2
 	divRes = decNumber
+	#print("divExp", divExp)
 	while( divRes/maxDiv > 0 ): 
 		hVal = int(divRes/maxDiv);
 		divRes = divRes - ( hVal*maxDiv );
 		maxDiv = maxDiv/base;
 		hexVals.append( hVal )
+		#print(">>>", hVal, divRes, maxDiv, hexVals)
 			
 	for ie in range( len(hexVals)-1, exp):
 		hexVals.append( 0 )
+		#print("+++", 0, hexVals)
 
-	return hexVals; 
+	while len(hexVals)%lenModulo > 0:
+		hexVals = [0] + hexVals; 
+		#print("---", 0, hexVals)
+	
+	return hexVals; #[::-1]; 
 
 def decToHex( dec: int ) -> List[int]: 
 	return decToBase(16, dec)
@@ -97,10 +106,13 @@ def hexToAscii ( hexNumber: List[int] ) -> str:
 
 def decToStr(dec: int) -> str : 
 	bina = decToBin(dec) 
-	strBin = '000'
+	strBin = ''
 	for i in bina:
+		#strBin = str(i)+strBin
 		strBin += str(i)
-	return strBin[-4:]
+	'''for i in range(4-len(strBin)):
+		strBin = '0'+strBin'''
+	return strBin #[-4:]
 
 def decToClockStr(dec: int, forOds: bool = False) -> str :
 	firstL = ''
@@ -115,13 +127,15 @@ def decToClockStr(dec: int, forOds: bool = False) -> str :
 		middleSpace += ' '
 	for h in hexVal:
 		s = decToStr(h)
-		firstL += s[3] + middleSpace + s[0]
-		secondL += asciiArrows[1] + middleSpace + asciiArrows[4]
-		thirdL += s[2]+ lastSpace + asciiArrows[2] + lastSpace +s[1]
-		if i < len(hexVal)-1: 
-			firstL += ' | '
-			secondL += ' | '
-			thirdL += ' | '
+		if h > 0 :
+			#print(">>>", h, s, hexVal)
+			firstL += s[0] + middleSpace + s[3]
+			secondL += asciiArrows[1] + middleSpace + asciiArrows[4]
+			thirdL += s[1]+ lastSpace + asciiArrows[2] + lastSpace +s[2]
+			if i < len(hexVal)-1 : 
+				firstL += ' | '
+				secondL += ' | '
+				thirdL += ' | '
 		i+=1
 	return firstL+'\n'+secondL+'\n'+thirdL
 
@@ -155,10 +169,13 @@ if __name__ == '__main__':
 	else : dec = 71
 	print("Dec :", dec)
 	print("Bin :", decToBin(dec))
+	print("D2S :", decToStr(dec))
 	print("Clock")
 	print(decToClockStr(dec))
 	print("Hex :", decToHex(dec))
 	print("Bibi:", decToBibi(dec))
 	#print(decToCounterClockStr(dec))
+	#print("Bin :", decToBin(dec))
+	#print("Hex :", decToHex(dec))
 	
 

@@ -12,10 +12,11 @@ def mkRow(i):
 	bibi = boby.hexToBibi( hexa )
 	return [ i, strBin, strBinSq, boby.ROOTPATH+'/img/'+str(i)+'.png', bibi ]
 	
-table = [ ['Décimal', 'Binaire', 'Représentation\nhoraire', 'Notation', 'Prononciation'] ]
+table = [ ['Décimal', 'Binaire', 'Représentation\nhoraire', 'Notation', 'BiBi'] ]
 for i in range(16):
 	row = mkRow(i)
 	table.append(row)
+	#print(row)
 
 	
 mkOdt.mkTab(table, 'Notation_71')
